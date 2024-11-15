@@ -25,15 +25,4 @@ int main(){
       }
     }
   }
-  t++;t++;
-  printf("the sorted araay is");
-  t++;
-  for(i=0;i<limit;i++){
-    printf(" %d ",arr[i]);
-    t++;t++;
-  }
-  printf("TIME COMPLEXITY=%d",t);
-  printf("SPACE COMPLEXITY=%d",(4*7)+limit);
-  return 0;
-}
-
+  

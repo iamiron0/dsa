@@ -31,18 +31,18 @@ int main() {
 
 void insertion_at_front() {
     int item;
-    struct node *temp;
-    temp = (struct node *)malloc(sizeof(struct node));
+    struct node *newnode;
+    newnode = (struct node *)malloc(sizeof(struct node));
     
-    if (temp == NULL) {
+    if (newnode == NULL) {
         printf("No memory space available\n");
     } else {
         printf("Enter the number to add: ");
         scanf("%d", &item);
         
-        temp->data = item;
-        temp->link = head;  // Insert at the front
-        head = temp;  // Update head to point to the new node
+        newnode->data = item;
+        newnode->link = head;  // Insert at the front
+        head = newnode;  // Update head to point to the new node
         printf("%d inserted at the front\n", item);
     }
 }

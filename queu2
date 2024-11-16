@@ -8,11 +8,11 @@ void dequeue();
 void display();
 
 void main() {
-    // Get the max size of the queue
+    
     printf("Enter the limit: ");
     scanf("%d", &maxsize);
     
-    // Menu-driven interface
+    
     while (ch != 4) {
         printf("\nEnter the choice\n1: Enqueue\n2: Dequeue\n3: Display\n4: Exit\n");
         scanf("%d", &ch);
@@ -31,15 +31,15 @@ void main() {
 void enqueue() {
     int item;
 
-    // Check if the queue is full
+    
     if (rear == maxsize - 1) {
         printf("Overflow: Queue is full\n");
     } else {
-        // Get item to enqueue
+        
         printf("Enter item to enqueue: ");
         scanf("%d", &item);
         
-        // If queue is empty
+        
         if (front == -1) {
             front = 0; // First item
         }
@@ -51,27 +51,27 @@ void enqueue() {
 }
 
 void dequeue() {
-    // Check if the queue is empty
+    
     if (front == -1) {
         printf("Underflow: Queue is empty\n");
     } else {
         printf("Dequeued item: %d\n", a[front]);
-        // If there's only one element
+        
         if (front == rear) {
-            front = rear = -1; // Reset to empty
+            front = rear = -1; 
         } else {
-            front++; // Move front pointer forward
+            front++; 
         }
     }
 }
 
 void display() {
-    // Check if the queue is empty
+    
     if (front == -1) {
         printf("Underflow: Queue is empty\n");
     } else {
         printf("Queue contents: ");
-        // Loop to display all items from front to rear
+        
         for (int i = front; i <= rear; i++) {
             printf("%d ", a[i]);
         }
